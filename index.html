@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body style="background-image: url(bg.jpg)">
+	<h1><p class="score1">Счет: </p></h1>
+	<h1><p class="score2">Жуки: </p></h1>
+	<script type="text/javascript">
+	let juki = 0 
+	let score1 = document.querySelector(".score1")
+	let score2 = document.querySelector(".score2")
+	score1.innerHTML = ;
+	let create= function(){
+		let rand = Math.random()*1300 
+		let round = Math.round(rand) 
+
+		let rand_top = Math.random()*700 
+		let round_top = Math.round(rand_top)
+		juki = juki + 1
+		
+		let newDiv = document.createElement('img');
+		document.body.appendChild(newDiv);
+		newDiv.style.height = "90px";
+		newDiv.style.width = "90px";
+		newDiv.style.marginLeft = round + "px"
+		newDiv.style.marginTop = round_top + "px"
+		newDiv.style.position = "absolute"
+		newDiv.src= "img.svg"
+}
+
+setInterval(create,1000)
+	</script>
+</body>
+</html>
